@@ -34,9 +34,9 @@ class InitCommand extends Command
         $this
             ->setDefinition(array(
                 new InputOption('name', '', InputOption::PARAMETER_REQUIRED, 'The application name (App)', 'App'),
-                new InputOption('app_path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (app/)', 'app/'),
-                new InputOption('src_path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (src/)', 'src/'),
-                new InputOption('web_path', '', InputOption::PARAMETER_REQUIRED, 'The path to the public web root (web/)', 'web/'),
+                new InputOption('app-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (app/)', 'app/'),
+                new InputOption('src-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (src/)', 'src/'),
+                new InputOption('web-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the public web root (web/)', 'web/'),
                 new InputOption('format', '', InputOption::PARAMETER_REQUIRED, 'Use the format for configuration files (php, xml, or yaml)', 'xml'),
             ))
             ->setName('init')
@@ -63,9 +63,9 @@ class InitCommand extends Command
 
         $skeletonDir = __DIR__.'/../../skeleton';
 
-        $appPath = getcwd().'/'.$input->getOption('app_path');
-        $srcPath = getcwd().'/'.$input->getOption('src_path');
-        $webPath = getcwd().'/'.$input->getOption('web_path');
+        $appPath = getcwd().'/'.$input->getOption('app-path');
+        $srcPath = getcwd().'/'.$input->getOption('src-path');
+        $webPath = getcwd().'/'.$input->getOption('web-path');
 
         $filesystem->mirror($skeletonDir.'/application/generic', $appPath);
         $filesystem->mirror($skeletonDir.'/application/'.$input->getOption('format'), $appPath);
