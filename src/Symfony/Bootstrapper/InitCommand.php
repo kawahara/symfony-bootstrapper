@@ -37,7 +37,7 @@ class InitCommand extends Command
                 new InputOption('app-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (app/)', 'app/'),
                 new InputOption('src-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (src/)', 'src/'),
                 new InputOption('web-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the public web root (web/)', 'web/'),
-                new InputOption('format', '', InputOption::PARAMETER_REQUIRED, 'Use the format for configuration files (php, xml, or yaml)', 'xml'),
+                new InputOption('format', '', InputOption::PARAMETER_REQUIRED, 'Use the format for configuration files (php, xml, or yml)', 'xml'),
             ))
             ->setName('init')
         ;
